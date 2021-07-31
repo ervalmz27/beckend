@@ -1,0 +1,15 @@
+{
+    "databaseURI": "mongodb://admin:A8OY25SHOF2VZ07A@db/buzz?authSource=admin",
+    "appId": "IQGR3JRHIFLST86A",
+    "masterKey": "W0GFR70QC3GUX2AF",
+    "readOnlyMasterKey": "2WIRX2FJ1PKN167C",
+    "restAPIKey": "X8W70XP5UXKNWUQO",
+    "javascriptKey": "S78D3J7JGYOXSEU6",
+    "serverURL": "http://localhost:1337/parse",
+    "publicServerURL": "http://localhost:1337/parse",
+    "startLiveQueryServer": true,
+    "cloud": "/parse-server/cloud/main.js",
+    "liveQuery": {
+        "classNames": ["Message", "Sender"]
+    }
+}

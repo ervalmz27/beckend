@@ -1,0 +1,8 @@
+{
+    "appId": "IQGR3JRHIFLST86A",
+    "masterKey": "W0GFR70QC3GUX2AF",
+    "readOnlyMasterKey": "2WIRX2FJ1PKN167C",
+    "restAPIKey": "X8W70XP5UXKNWUQO",
+    "javascriptKey": "S78D3J7JGYOXSEU6",
+    "serverURL": "http://localhost:1337/parse"
+}

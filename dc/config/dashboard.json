@@ -1,0 +1,18 @@
+{
+    "apps": [
+        {
+          "serverURL": "http://localhost:1337/parse",
+          "appId": "IQGR3JRHIFLST86A",
+          "masterKey": "W0GFR70QC3GUX2AF",
+          "appName": "Buzz Dashboard"
+        }
+    ],
+    "users": [
+        {
+          "user":"admin",
+          "pass":"A8OY25SHOF2VZ07A"
+        }
+    ],
+    "host": "0.0.0.0",
+    "port": 4040
+}

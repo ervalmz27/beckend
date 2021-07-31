@@ -1,0 +1,52 @@
+version: '3'
+
+networks:
+    buzz:
+
+# volumes:
+#     uni-mongo:
+#        external: true
+
+services:
+  db:
+    image: mongo:4.2-bionic
+    container_name: db
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: A8OY25SHOF2VZ07A
+    volumes:
+      # - uni-mongo:/data/db
+      - /home/ikhwan/Desktop/Buzz/vol-strike:/data/db
+    networks:
+      - buzz
+
+  server:
+    image: parseplatform/parse-server
+    container_name: server
+    restart: always
+    ports:
+      - 1337:1337
+    volumes:
+      - ./config:/parse-server/config
+    command: "/parse-server/config/server.json"
+    depends_on:
+      - db
+    networks:
+      - buzz
+
+  dashboard:
+    image: parseplatform/parse-dashboard
+    container_name: dashboard
+    restart: always
+    ports:
+      - 4040:4040
+    volumes:
+      - ./config:/parse-server/config
+    command: "--config /parse-server/config/dashboard.json --allowInsecureHTTP"
+    depends_on:
+      - server
+    networks:
+      - buzz
